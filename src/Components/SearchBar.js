@@ -1,10 +1,10 @@
 //user input into seachbar getting data
 import React, {useState} from "react";
-import Track from './Track';
+import SearchResult from './SearchResults';
 
 import styles from './SearchBar.module.css';
 
-function SearchBar({token}) {
+function SearchBar({token, addToPlaylist}) {
 
     const [search, setSearch] = useState('');
     const [tracks, setTracks] = useState([]);
@@ -28,14 +28,18 @@ function SearchBar({token}) {
             })
 
             const data = await response.json();
+            
             //console.log(data.tracks.items);
             setTracks(data.tracks.items);
 
+            //Set back the input empty
+            setSearch('');
 
         } catch (error) {
             console.log(error.message)
         }
     }
+
 
     return (
         <>
@@ -47,7 +51,7 @@ function SearchBar({token}) {
                     placeholder="Search for a song ..."/>
                 <button>Search</button>
             </form>
-            <Track singleTrack={tracks}/>
+            <SearchResult listOftracks={tracks} addToPlaylist={addToPlaylist}/>
         </>
     )
 }

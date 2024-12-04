@@ -1,24 +1,29 @@
 //is going to store the single track / song
 // import {useState} from 'react';
+
 import styles  from './Track.module.css';
 
-function Track({singleTrack}) {
+function Track({name, artist, addToPlaylist}) {
 
     // const [artists, setArtists] = useState(null)
 
-    return (
-        <section>
-            <h1>{singleTrack.length >0 ? "Results" : ""}</h1>
-            <ul>
-                {singleTrack.map((track) =>
-                <li className={styles.li}>
-                    <h5>{track.name}</h5>
+    function handleAddClick() {
+        const trackDetails = {
+            name: name,
+            artist: artist
+        }
+        addToPlaylist(trackDetails);
+    }
 
-                    <p>{track.album.name} | {track.artists.map((artist) => artist.name).join(', ')}</p>
-                </li>
-                )}
-            </ul>
-        </section>
+    return (
+        <>      
+            <li className={styles.li}>
+                {<h5>{name}</h5> }
+
+                {<p>{name} | {artist}</p>}
+                <button onClick={handleAddClick}>add</button>
+            </li>
+        </>
         
     )
 }

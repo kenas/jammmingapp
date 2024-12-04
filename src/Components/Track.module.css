@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif; 
 }
 
 li {
@@ -15,11 +18,12 @@ li {
 h5 {
     font-size: 20px;
     color: white;
-    font-family: "Inter", sans-serif;
+    font-weight: 400;
 }
 
 p {
     color: hsl(248, 89%, 79%);
     font-size: 14px;
     padding: 4px 0px 2px 0px;
+    width: 90%;
 }
