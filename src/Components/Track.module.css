@@ -25,11 +25,11 @@
 .cardContent {
     display: flex;
     justify-content: space-between;
-    padding: 14px 0px 0px 0px;
 }
 
-.cardContent p {
+.cardContent, p {
     color: hsl(248, 89%, 79%);
+    padding: 3px 0px;
 }
 
 .buttonAddToPlay {

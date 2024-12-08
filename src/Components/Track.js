@@ -20,12 +20,12 @@ function Track({id, name, artist, addToPlaylist}) {
     return (
         <>      
             <div className={styles.card}>
-                {<h5 className={styles.cardTitle}>{name}</h5> }
+            
                 <div className={styles.cardContent}>
-                    {<p>{name} | {artist}</p>}
+                    {<h5 className={styles.cardTitle}>{name}</h5> }
                     <button className={styles.buttonAddToPlay} onClick={handleAddClick}>+</button>
                 </div>
-               
+                {<p>{name} | {artist}</p>}
             </div>
         </>
         

@@ -34,11 +34,11 @@ h5 {
 .cardContentPlaylist {
     display: flex;
     justify-content: space-between;
-    padding: 14px 0px 0px 0px;
 }
 
-.cardContentPlaylist p{
+.cardContentPlaylist, p{
     color: hsl(248, 89%, 79%);
+    padding: 3px 0px;
 }
 
 .cardContentPlaylist button {

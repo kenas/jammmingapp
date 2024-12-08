@@ -9,6 +9,7 @@ import { useState } from "react";
 function App() {
   const token = useSpotifyToken();
 
+    //This state is looking after adding songs to playlist and removing songs from the playlist
     const [playlist, setPlaylist] = useState([]);
 
 
