@@ -7,7 +7,7 @@ function SearchResult({listOftracks, addToPlaylist}) {
     
     return (
         <section className={styles.section}>
-            {listOftracks.length > 0 ? <h2>Results</h2> : ""}
+            {listOftracks.length > 0 ? <h2>Results</h2> : <h1>Welcome to JAMMMING!</h1>}
 
               
                     {listOftracks.map((track) => 

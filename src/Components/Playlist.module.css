@@ -29,6 +29,7 @@ h5 {
     margin-bottom: 15px;
     padding: 1rem;
     border-radius: 7px;
+    transition: all 5s ease-out;
 }
 
 .cardContentPlaylist {

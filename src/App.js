@@ -24,7 +24,10 @@ function App() {
   return (
     <div className={styles.container}>
       <SearchBar token={token} addToPlaylist={addToPlaylist}/>
+     
       <Playlist className={styles.results} theSong={playlist} onRemoveSong={removeFromPlaylist}/>
+
+
     </div>
   );
 }
