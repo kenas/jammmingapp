@@ -1,23 +1,35 @@
 import styles from './Playlist.module.css';
 
-function Playlist({theSong}) {
+function Playlist({theSong, onRemoveSong}) {
+
+
+    function handleAddToSpotify () {
+        alert("aad");
+    }
+
 
     return (
-        <section>
-            <div className={styles.titles}>
-                <h1>
-                    {Object.keys(theSong).length > 0 ? 'Playlist' : ''}
-                </h1>
-                <small>Save playlist</small>
-            </div>
+        <section className={styles.playlist}>
+
+                {Object.keys(theSong).length > 0 ? 
+                
+                <div className={styles.navMenu}>
+                    <h2>My playlist</h2> <small onClick={handleAddToSpotify}>Save to spotify</small>
+               
+                </div>: ''}
          
-                   {theSong.map((song)=>
-                   <div className={styles.card}>
-                        <h5>{song.name}</h5>
+               
+                {theSong.map((song)=>
+                <div key={song.id}    className={styles.card}>
+                    <h5>{song.name}</h5>
+
+                    <div className={styles.cardContentPlaylist}>
                         <p>{song.name} | {song.artist}</p>
-                   </div>  
-  
-                    
+                        <button onClick={() => onRemoveSong(song.id)}>-</button>
+                    </div>
+
+                </div>  
+
                 )}
                 
         </section>

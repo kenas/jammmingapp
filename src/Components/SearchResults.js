@@ -7,17 +7,18 @@ function SearchResult({listOftracks, addToPlaylist}) {
     
     return (
         <section className={styles.section}>
-            <h1>{listOftracks.length > 0 ? "Results" : ""}</h1>
+            {listOftracks.length > 0 ? <h2>Results</h2> : ""}
 
-                <ul>
+              
                     {listOftracks.map((track) => 
                         <Track 
+                            id={track.id}
                             name={track.album.name} 
                             artist={track.artists.map((artist) => artist.name).join(', ')}
                             addToPlaylist={addToPlaylist}
                         />
                     )}
-                </ul>
+               
         </section>
 
     )

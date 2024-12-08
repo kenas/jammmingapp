@@ -4,7 +4,7 @@
     display: flex;               /* Use Flexbox for centering */
     flex-direction: column;
     /* justify-content: center;     Center vertically */
-    margin-top: 20%;
+    margin-top: 30%;
     align-items: center;         /* Center horizontally */
 
   }
@@ -18,7 +18,7 @@ input {
     width: 400px;
 } 
 
-button {
+.buttonSearch {
     border: none;
     margin-top: 1rem;
     width: 400px;

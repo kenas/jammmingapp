@@ -1,8 +1,21 @@
-.titles {
+section.playlist {
+    margin-top: 10%;
+    width: 90%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.navMenu {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
     align-items: flex-end;
+    justify-content: space-between;
+}
+.navMenu small {
+    margin-bottom: 1rem;
 }
 
 h5 {
@@ -14,7 +27,23 @@ h5 {
 .card {
     background-color: hsl(248, 100%, 59%);
     margin-bottom: 15px;
-    padding: 16px 0px 16px 26px;
+    padding: 1rem;
     border-radius: 7px;
-    width: 80%;
+}
+
+.cardContentPlaylist {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0px 0px 0px;
+}
+
+.cardContentPlaylist p{
+    color: hsl(248, 89%, 79%);
+}
+
+.cardContentPlaylist button {
+    padding: 7px 17px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
 }

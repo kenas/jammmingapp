@@ -3,26 +3,30 @@
 
 import styles  from './Track.module.css';
 
-function Track({name, artist, addToPlaylist}) {
+
+function Track({id, name, artist, addToPlaylist}) {
 
     // const [artists, setArtists] = useState(null)
 
     function handleAddClick() {
         const trackDetails = {
             name: name,
-            artist: artist
+            artist: artist,
+            id: id
         }
         addToPlaylist(trackDetails);
     }
 
     return (
         <>      
-            <li className={styles.li}>
-                {<h5>{name}</h5> }
-
-                {<p>{name} | {artist}</p>}
-                <button onClick={handleAddClick}>add</button>
-            </li>
+            <div className={styles.card}>
+                {<h5 className={styles.cardTitle}>{name}</h5> }
+                <div className={styles.cardContent}>
+                    {<p>{name} | {artist}</p>}
+                    <button className={styles.buttonAddToPlay} onClick={handleAddClick}>+</button>
+                </div>
+               
+            </div>
         </>
         
     )

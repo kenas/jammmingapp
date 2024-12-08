@@ -49,7 +49,7 @@ function SearchBar({token, addToPlaylist}) {
                     value={search}
                     onChange={handleChange}
                     placeholder="Search for a song ..."/>
-                <button>Search</button>
+                <button className={styles.buttonSearch}>Search</button>
             </form>
             <SearchResult listOftracks={tracks} addToPlaylist={addToPlaylist}/>
         </>
