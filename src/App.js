@@ -14,7 +14,15 @@ function App() {
 
 
     function addToPlaylist(trackDetails) {
-      setPlaylist([...playlist, trackDetails]);
+
+      const songExist = playlist.some((song) => song.id ===trackDetails.id);
+
+      if(songExist) {
+        alert(`The song: ${trackDetails.name} is alredy in your playlist`);
+      } else {
+        setPlaylist([...playlist, trackDetails]);
+      }
+     
     }
 
     function removeFromPlaylist(removeSong) {
