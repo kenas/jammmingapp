@@ -14,6 +14,7 @@ h2 {
     align-items: flex-end;
     justify-content: space-between;
 }
+
 .navMenu small {
     margin-bottom: 1rem;
 }
@@ -32,12 +33,31 @@ h5 {
     transition: all 5s ease-out;
 }
 
+.cardSaveToSpotify {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+
+.cardSaveToSpotify input {
+    border: none;
+    border-bottom: 2px solid;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.cardSaveToSpotify button {
+    border: none;
+    padding: 13px;
+   
+}
+
 .cardContentPlaylist {
     display: flex;
     justify-content: space-between;
 }
 
-.cardContentPlaylist, p{
+.cardContentPlaylist, p {
     color: hsl(248, 89%, 79%);
     padding: 3px 0px;
 }

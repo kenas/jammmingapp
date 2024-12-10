@@ -1,6 +1,5 @@
 .searchBar {
     grid-area: searchBar;
-
     display: flex;               /* Use Flexbox for centering */
     flex-direction: column;
     /* justify-content: center;     Center vertically */
@@ -9,7 +8,7 @@
 
   }
 
-input {
+.searchBar input {
     border: none;
     outline: none;
     border-bottom: 2px solid hsl(248, 55%, 41%);
