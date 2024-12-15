@@ -7,6 +7,7 @@ import styles from './SearchBar.module.css';
 function SearchBar({token, addToPlaylist}) {
 
     const [search, setSearch] = useState('');
+    const [toggle, setToggle] = useState(false);
     const [tracks, setTracks] = useState([]);
     
 
@@ -17,6 +18,11 @@ function SearchBar({token, addToPlaylist}) {
     async function handleSearch(e) {
         e.preventDefault();
 
+        if(search === '') {
+            setToggle(true);
+            return;
+        }
+        setToggle(false)
         try {
 
             const response = await fetch(`https://api.spotify.com/v1/search?q=${search}&type=track`, {
@@ -31,7 +37,7 @@ function SearchBar({token, addToPlaylist}) {
             
             //console.log(data.tracks.items);
             setTracks(data.tracks.items);
-
+         
             //Set back the input empty
             setSearch('');
 
@@ -50,7 +56,10 @@ function SearchBar({token, addToPlaylist}) {
                     onChange={handleChange}
                     placeholder="Search for a song ..."/>
                 <button className={styles.buttonSearch}>Search</button>
+                <p className={styles.errorMessage}></p>
+                {toggle ? "Please write a name of the song!" : ''}
             </form>
+
             <SearchResult listOftracks={tracks} addToPlaylist={addToPlaylist}/>
         </>
     )
