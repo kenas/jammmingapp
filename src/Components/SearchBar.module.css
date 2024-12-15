@@ -27,4 +27,8 @@
     background-color: hsl(248, 55%, 41%);
     font-size: 1.2rem;
 }
+
+form, .errorMessage {
+    color: red;
+}
   
