@@ -4,15 +4,16 @@
 import styles  from './Track.module.css';
 
 
-function Track({id, name, artist, addToPlaylist}) {
+function Track({id, name, artist, uri, addToPlaylist}) {
 
     // const [artists, setArtists] = useState(null)
 
     function handleAddClick() {
         const trackDetails = {
+            id: id,
             name: name,
             artist: artist,
-            id: id
+            uri: uri
         }
         addToPlaylist(trackDetails);
     }
