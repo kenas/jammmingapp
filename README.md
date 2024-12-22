@@ -15,3 +15,4 @@ This is a React-based application that allows users to search for tracks, explor
     Authentication
 
 # jammmingapp
+# jammmingapp
