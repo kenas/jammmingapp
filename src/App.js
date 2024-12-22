@@ -94,14 +94,14 @@ function App() {
     if (!authCode) {
       alert("Redirecting to Spotify for authentication...");
       try {
-        const clientId = "0e49081f39b5477782421511eeccaa80";
+        const clientID = process.env.REACT_APP_SPOTIFY_USER_ID;
         const redirectUri = "http://localhost:3000";
         const scopes = [
           "playlist-modify-public",
           "playlist-modify-private",
         ].join(" ");
   
-        const spotifyAuthUrl = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientId}&scope=${encodeURIComponent(scopes)}&redirect_uri=${encodeURIComponent(redirectUri)}`;
+        const spotifyAuthUrl = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientID}&scope=${encodeURIComponent(scopes)}&redirect_uri=${encodeURIComponent(redirectUri)}`;
   
         // Redirect the user to Spotify for authentication
         window.location.href = spotifyAuthUrl;
@@ -115,15 +115,17 @@ function App() {
       if (!theToken) {
         // If the token is not available, exchange the authCode for an access token
         try {
-          const clientId = "0e49081f39b5477782421511eeccaa80";
-          const clientSecret = "283c135e48134e0db1df72ef7170f4dc";  // Your client secret
+
+          const clientID = process.env.REACT_APP_SPOTIFY_USER_ID;
+          const secretID = process.env.REACT_APP_SPOTIFY_SECRET_ID;
+   
           const redirectUri = "http://localhost:3000";
   
           const response = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
-              'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret), // Basic auth for client credentials
+              'Authorization': 'Basic ' + btoa(clientID + ':' + secretID), // Basic auth for client credentials
             },
             body: new URLSearchParams({
               grant_type: 'authorization_code',

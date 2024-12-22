@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /Components/GetToken.js
+.env
 
 # testing
 /coverage

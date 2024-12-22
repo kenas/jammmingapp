@@ -1,6 +1,6 @@
 export async function getPublicToken() {
-    const clientID = '0e49081f39b5477782421511eeccaa80';
-    const secretID = '283c135e48134e0db1df72ef7170f4dc';
+    const clientID = process.env.REACT_APP_SPOTIFY_USER_ID;
+    const secretID = process.env.REACT_APP_SPOTIFY_SECRET_ID;
 
     // Base64 encode the client ID and secret
     const encodedCredentials = btoa(`${clientID}:${secretID}`);
