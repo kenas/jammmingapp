@@ -264,6 +264,7 @@ function App() {
         listOftracksFindBySearch={listOftracksFindBySearch}
         setListOftracksFindBySearch={setListOftracksFindBySearch}
         addTrackToPlaylist={addTrackToPlaylist}
+        auth={auth}
       />
 
     <Playlist 
