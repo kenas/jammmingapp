@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/36865e60-b755-482f-a65c-015e46a3cd2c/deploy-status)](https://app.netlify.com/sites/jammming-appppp/deploys)
 # **An application based on React, built as a project from Codecademy.**
 
 ![file-structure.jpg](https://i.postimg.cc/PrhYJy9q/file-structure.jpg)
