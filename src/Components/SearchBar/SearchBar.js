@@ -49,7 +49,8 @@ function SearchBar({token, addToPlaylist, listOftracksFindBySearch, setListOftra
     return (
         <>
             <form onSubmit={handleSearch} className={styles.searchBar}>
-                <input 
+                <input
+                    name="search"
                     type="text"
                     value={search}
                     onChange={handleChange}

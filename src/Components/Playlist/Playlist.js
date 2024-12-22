@@ -13,7 +13,6 @@ function Playlist({selectedTrack, removeTrackFromPlaylist, handleNameOfPlaylist,
         handleAuthProcessToSpotify(e); // Proceed if the playlist name is valid
     }
     
-
     //The user input is catch here and send to state in the parent App.js 
     function handleOnchangeNameOfPlaylist(e) {
        handleNameOfPlaylist(e.target.value);
@@ -28,7 +27,8 @@ function Playlist({selectedTrack, removeTrackFromPlaylist, handleNameOfPlaylist,
                 <div className={styles.navMenu}>
                     <h2>My playlist</h2>
                     <div className={styles.cardSaveToSpotify}>
-                    <input 
+                    <input
+                        name="playlist"
                         placeholder='The name of the playlist?'
                         onChange={handleOnchangeNameOfPlaylist}
                     />
