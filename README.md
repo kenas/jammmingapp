@@ -42,6 +42,10 @@ The UI is unctional, prioritizes usability and simplicity over intricate design.
 -   HTTP Requests and Responses
 -   Authentication
 
+## Futures work
+
+Refactor the code so that all the logic and requests are moved out of App.js.
+
 ## Screenshot of the app
 [![Screenshot-2024-12-21-at-18-32-39.png](https://i.postimg.cc/C1Q7Dn31/Screenshot-2024-12-21-at-18-32-39.png)](https://postimg.cc/cgffGC4y)
 
