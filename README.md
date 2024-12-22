@@ -42,4 +42,7 @@ The UI is unctional, prioritizes usability and simplicity over intricate design.
 -   HTTP Requests and Responses
 -   Authentication
 
+## Screenshot of the app
+[![Screenshot-2024-12-21-at-18-32-39.png](https://i.postimg.cc/C1Q7Dn31/Screenshot-2024-12-21-at-18-32-39.png)](https://postimg.cc/cgffGC4y)
+
 22 December 2024 By Libor Gess 
