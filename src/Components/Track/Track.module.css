@@ -12,9 +12,15 @@
     padding: 1rem;
     margin-bottom: 0.8rem;
    }
+
+.albumImg {
+    border-radius: 0.2rem;
+}
    
 .cardTitle {
     font-size: 1.3rem;
+    color: white;
+    font-weight: 400;
 }
 
 .buutonSend {
@@ -24,12 +30,20 @@
 
 .cardContent {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.cardContent, p {
+.cardDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0px 13px;
+}
+
+.cardDetails, p {
     color: hsl(248, 89%, 79%);
     padding: 3px 0px;
+    font-size: 0.9rem;
 }
 
 .buttonAddToPlay {
@@ -37,4 +51,7 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
+    background-color: hsl(248, 32%, 24%);
+    color: white;
+    font-size: 2rem;
 }

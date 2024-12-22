@@ -5,3 +5,13 @@
 
 ## Project Overview
 This is a React-based application that allows users to search for tracks, explore artist and album information, The main goal of the project is to offer a seamless experience for users to create playlists and save them directly to their Spotify account.# jammming
+
+
+    HTML
+    CSS
+    JavaScript
+    React
+    HTTP Requests and Responses
+    Authentication
+
+# jammmingapp

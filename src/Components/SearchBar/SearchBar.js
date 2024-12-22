@@ -1,16 +1,15 @@
 //user input into seachbar getting data
 import React, {useState} from "react";
-import SearchResult from './SearchResults';
+import SearchResult from '../SearchResult/SearchResults';
 
 import styles from './SearchBar.module.css';
 
-function SearchBar({token, addToPlaylist}) {
+function SearchBar({token, addToPlaylist, listOftracksFindBySearch, setListOftracksFindBySearch, addTrackToPlaylist}) {
 
     const [search, setSearch] = useState('');
-    const [toggle, setToggle] = useState(false);
-    const [tracks, setTracks] = useState([]);
+    const [toggleErrorMessage, setToggleErrorMessage] = useState(false);
+   
     
-
     function handleChange(e) {
         setSearch(e.target.value);
     }
@@ -19,10 +18,11 @@ function SearchBar({token, addToPlaylist}) {
         e.preventDefault();
 
         if(search === '') {
-            setToggle(true);
-            return;
+            setToggleErrorMessage(true);
+            return null;
         }
-        setToggle(false)
+        setToggleErrorMessage(false)
+
         try {
 
             const response = await fetch(`https://api.spotify.com/v1/search?q=${search}&type=track`, {
@@ -35,8 +35,8 @@ function SearchBar({token, addToPlaylist}) {
 
             const data = await response.json();
             
-            //console.log(data.tracks.items);
-            setTracks(data.tracks.items);
+            setListOftracksFindBySearch(data.tracks.items);
+            sessionStorage.setItem('listOftracksFindBySearch', JSON.stringify(data.tracks.items));
          
             //Set back the input empty
             setSearch('');
@@ -45,7 +45,6 @@ function SearchBar({token, addToPlaylist}) {
             console.log(error.message)
         }
     }
-
 
     return (
         <>
@@ -57,10 +56,14 @@ function SearchBar({token, addToPlaylist}) {
                     placeholder="Search for a song ..."/>
                 <button className={styles.buttonSearch}>Search</button>
                 <p className={styles.errorMessage}></p>
-                {toggle ? "Please write a name of the song!" : ''}
+                {toggleErrorMessage ? "Please write a name of the song!" : ''}
             </form>
 
-            <SearchResult listOftracks={tracks} addToPlaylist={addToPlaylist}/>
+            <SearchResult 
+                listOftracksFindBySearch={listOftracksFindBySearch} 
+                addToPlaylist={addToPlaylist}
+                addTrackToPlaylist={addTrackToPlaylist}
+            />
         </>
     )
 }
