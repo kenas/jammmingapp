@@ -13,6 +13,8 @@ The core functionality revolves around creating custom playlists. Users can sear
 
 Moreover, the app retains its state across sessions using session storage, allowing users to pick up where they left off without losing their progress. It includes validation mechanisms, such as checking for duplicate tracks in the playlist, and guides users through authentication when needed. Overall, this app bridges the gap between music discovery and playlist creation, making it a perfect tool for Spotify enthusiasts who love customizing their listening experience.
 
+<a href="https://jammming-appppp.netlify.app/" target="_black">Live App</a>
+
 ## UI
 
 The UI is unctional, prioritizes usability and simplicity over intricate design. The layout is clean and straightforward, ensuring that users can focus on the core features without being distracted by unnecessary elements. The design adopts a minimalist approach, with clearly defined sections for search results, playlists, and input fields. While it may not boast advanced aesthetics, it is intuitive enough for users to navigate seamlessly.
