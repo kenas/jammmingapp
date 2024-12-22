@@ -3,6 +3,9 @@
 ![file-structure.jpg](https://i.postimg.cc/PrhYJy9q/file-structure.jpg)
 
 ## Project Overview
+
+Note: This project was developed during weekends, as I worked 48 hours from Monday to Friday.
+
 React application designed to enhance the user’s interaction with Spotify’s vast music library. The application offers a seamless way to search for tracks, explore artist profiles, and view album details. Additionally, users can preview audio snippets, making music discovery engaging and intuitive. The sleek and modern design ensures a user-friendly experience, with all essential features accessible at a glance.
 
 The core functionality revolves around creating custom playlists. Users can search for their favorite songs and add them to a playlist. The app integrates directly with Spotify’s Web API, enabling users to save their curated playlists directly to their Spotify accounts. This is achieved through a secure authentication process, ensuring the user’s account details remain private while providing access to personalized features.
