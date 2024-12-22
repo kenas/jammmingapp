@@ -95,7 +95,7 @@ function App() {
       alert("Redirecting to Spotify for authentication...");
       try {
         const clientID = process.env.REACT_APP_SPOTIFY_USER_ID;
-        const redirectUri = "http://localhost:3000";
+        const redirectUri = "https://jammming-appppp.netlify.app";
         const scopes = [
           "playlist-modify-public",
           "playlist-modify-private",
@@ -119,7 +119,7 @@ function App() {
           const clientID = process.env.REACT_APP_SPOTIFY_USER_ID;
           const secretID = process.env.REACT_APP_SPOTIFY_SECRET_ID;
    
-          const redirectUri = "http://localhost:3000";
+          const redirectUri = "https://jammming-appppp.netlify.app";
   
           const response = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
