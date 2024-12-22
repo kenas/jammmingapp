@@ -139,7 +139,7 @@ function App() {
           if (data.access_token) {
             const theToken = data.access_token;
             sessionStorage.setItem('theToken', theToken);  // Save token to sessionStorage
-            console.log('Access token saved:', theToken);
+            //console.log('Access token saved:', theToken);
             createNamePlaylist(theToken);  // Proceed with playlist creation
           } else {
             console.error('Failed to get access token from Spotify:', data.error);
@@ -174,7 +174,7 @@ function App() {
         }
   
         const data = await response.json();
-        console.log('Your ID is:', data.id)
+        //console.log('Your ID is:', data.id)
         return data.id;
   
       } catch (error) {
